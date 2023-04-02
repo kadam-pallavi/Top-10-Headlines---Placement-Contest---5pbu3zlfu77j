@@ -6,7 +6,7 @@ const App = () => {
   const [newsData, setNewsData] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const API_KEY="e410347e6921411e459893aafef98318";
+  const API_KEY="e41a347e6921411e459893aafef98318";
   
   const changeFunction =(e)=>
   {
