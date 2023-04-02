@@ -24,7 +24,7 @@ const App = () => {
     },[category])
   return (
     <div id="main">
-      <h1 className='heading'>Top 10 {category}news.</h1>
+      <h1 className='heading'>Top 10 {category} news.</h1>
       <select value={category}onChange={changeFunction}>
     
         <option value="general">General</option>
@@ -35,12 +35,11 @@ const App = () => {
         <option value="entertainment">Entertainment</option>
         <option value="science">Science</option>
       </select>
-{loading&& <p className='loader'>Loading...</p>}
- {!loading && 
-      <ol>
+{loading && <p className='loader'>Loading...</p>}
+ {!loading && <ol>
    {newsData.map((e,i)=>{
      return(<li key={i}>
-          <img className='news-img' src="{e.image}" alt=""/>
+          <img className='news-img' src={e.image} alt=""/>
           <section className='new-title-content-author'>
             <h3 className='news-title'>{e.title}</h3>
             <section className='new-content-author'>
